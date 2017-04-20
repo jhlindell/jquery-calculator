@@ -2,11 +2,11 @@ $('.buttons').on('click', buttonInput);
 var screen = $('#screen');
 
 function buttonInput(event) {
-  // if (screen.html() === 'ERROR') {
-  //   return;
-  // }
   if (event.target.id === 'clear') {
     screen.html('');
+  }
+  if (screen.html() === 'ERROR') {
+    return;
   }
   if (event.target.id !== 'clear') {
     screen.html(screen.html() + event.target.innerHTML);
